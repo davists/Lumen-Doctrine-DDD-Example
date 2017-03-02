@@ -1,0 +1,49 @@
+{
+  "name": "Lumen Doctrine DDD Example",
+  "description": "Service API",
+  "keywords": ["DDD", "Lumen", "Doctrine"],
+  "license": "MIT",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Davi dos Santos",
+      "email": "davi646@gmail.com",
+      "homepage": "https://github.com/davists",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.6.4",
+    "laravel/lumen-framework": "5.3.*",
+    "vlucas/phpdotenv": "~2.2",
+    "laravel-doctrine/orm": "1.2.*",
+    "firebase/php-jwt": "dev-master",
+    "graham-campbell/throttle": "^5.3"
+
+  },
+  "require-dev": {
+    "fzaninotto/faker": "~1.4",
+    "phpunit/phpunit": "~5.0",
+    "mockery/mockery": "~0.9"
+  },
+  "autoload": {
+    "psr-4": {
+      "Application\\Core\\": "Application/core/",
+      "Domain\\": "Domain/",
+      "Infrastructure\\": "Infrastructure/"
+    }
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests/",
+      "database/"
+    ]
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"copy('.env.example', '.env');\""
+    ]
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
