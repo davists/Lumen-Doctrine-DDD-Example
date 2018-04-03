@@ -15,10 +15,10 @@ There is one Controller, Service Application and Service Provider by Domain.
 Providers map Contracts and Implementations.
 
 ### Usage
-> composer install
-> mv Application/Lumen53/env_example  Application/Lumen53/.env
-> cd Application/Lumen53/
-> php artisan migrate --path="../../database/migrations/"
+> composer install <br />
+> mv Application/Lumen53/env_example  Application/Lumen53/.env <br />
+> cd Application/Lumen53/ <br />
+> php artisan migrate --path="../../database/migrations/" <br />
 
 ##### API Calls
 e.g. GET localhost/Lumen-Doctrine-DDD-Example/Application/Lumen53/public/api/v1/products
@@ -71,6 +71,6 @@ Davi dos Santos - davi646@gmail.com
 Nicolas Escouto - nicolas.escouto@gmail.com
 
 ### Release Notes 
->Isolation of framework dependency in Application concerns
->Use of YML for mappings
->Use of JMS serialization with YML
+>Isolation of framework dependency in Application concerns <br />
+>Use of YML for mappings <br />
+>Use of JMS serialization with YML <br />
