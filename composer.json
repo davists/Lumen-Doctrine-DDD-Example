@@ -1,5 +1,5 @@
 {
-  "name": "Petdrive Manager Service",
+  "name": "Store Service",
   "description": "Manager Service API",
   "keywords": ["DDD", "Lumen", "Doctrine"],
   "license": "MIT",
