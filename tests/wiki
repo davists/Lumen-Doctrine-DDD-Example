@@ -1,0 +1,13 @@
+Unit
+Test small units of code generally methods.
+
+Contract
+Test for endpoint activity and expected return.
+
+Functional
+Test for business rules for a endpoint.
+
+Acceptance
+Test for business using a set of endpoints.
+
+

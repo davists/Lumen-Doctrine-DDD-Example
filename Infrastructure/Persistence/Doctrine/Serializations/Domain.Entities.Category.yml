@@ -1,0 +1,35 @@
+Domain\Entities\Category:
+  #exclusion_policy: ALL
+  properties:
+
+    companyId:
+      expose: true
+      serialized_name: companyId
+
+    createdAt:
+      exclude: true
+
+  virtual_properties:
+    getText:
+      serialized_name: text
+
+
+#    encerradoComCobranca:
+#      expose: true
+#      serialized_name: encerradoComCobranca
+#
+#    periciaAdministrativaFinanceiro:
+#      expose: true
+#      serialized_name: periciaAdministrativaFinanceiro
+#      access_type: public_method
+#      accessor:
+#       getter: getPericiaAdministrativaFinanceiroId
+#
+#    createdAt:
+#      expose: true
+#      serialized_name: dataFinalizacao
+#      access_type: public_method
+#      accessor:
+#        getter: getCreatedAt
+#
+

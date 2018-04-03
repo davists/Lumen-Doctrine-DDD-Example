@@ -1,55 +1,42 @@
-# Lumen-Doctrine-DDD-Example
+#Lumen-Doctrine-DDD-Example
 Domain Driven Design Application Example, built with Lumen 5.3 and Doctrine.
 
-# Introduction:
+###Introduction
+Domain Driven Design approach help us write and maintain our core business preserved from technology dependencies. 
+With the aid of ubiquitous language you could model your Domain and use thirdy part technologies to fit your needs.
 There are some DDD concepts, that application does not implement as: ValueObject, multiple Entites.
-The main purpose is to give you a start point in terms of architecture.
+The main purpose of this example is to give you a start point in terms of architecture, given the density of DDD, 
+a simple example could not exhaust all the subject.
+The follow example implements a Store with products and product categories.
 
-#Assumptions:
+###Assumptions
 The Application Services are understood as Entrypoint for Domain.
 There is one Controller, Service Application and Service Provider by Domain.
 Providers map Contracts and Implementations.
 
-#Usage
+###Usage
 composer install <br/>
 
-To set the cache to database:
-```sql
-    
-    CREATE TABLE `cache` (
-      `key` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-      `value` text COLLATE utf8_unicode_ci NOT NULL,
-      `expiration` int(11) NOT NULL,
-      UNIQUE KEY `cache_key_unique` (`key`)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-```
+mv Application/Lumen53/env_example Application/Lumen53/.env
+
 To generate the schema<br/>
-<b>php artisan  doctrine:schema:create</b><br>
+1. cd Application/Lumen53/
+2. php artisan migrate --path="../../database/migrations/"
 
-or create the table
-```sql
-CREATE TABLE `manager` (
-      `id` int(11) NOT NULL AUTO_INCREMENT,
-      `company_id` int(11) NOT NULL,
-      `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-      `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-      `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-      `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
-      PRIMARY KEY (`id`)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
- ```
+API Calls <br/>
+e.g. GET localhost/Lumen-Doctrine-DDD-Example/Application/Lumen53/public/api/v1/products
 
-#Requirements
+###Requirements
 "php": ">=5.6.4", <br />
 "laravel/lumen-framework": "5.3.*", <br />
 "laravel-doctrine/orm": "1.2.*",
 
-#Credits
+###Credits
 https://github.com/GrahamCampbell/Laravel-Throttle <br/>
 https://github.com/tecnom1k3/sp-simple-jwt <br/>
 https://github.com/krisanalfa/lumen-jwt/blob/develop/app/Http/Middleware/CORSMiddleware.php <br/>
 
-#References:
+###References
 DDD <br/>
 https://github.com/dddinphp <br/>
 http://www.zankavtaskin.com/2013/09/applied-domain-driven-design-ddd-part-1.html <br/>
@@ -80,5 +67,13 @@ Generators <br/>
 https://github.com/InfyOmLabs/laravel-generator
 https://github.com/motamonteiro/gerador
 
-#Author
+###Author
 Davi dos Santos - davi646@gmail.com
+
+###Contributors
+Nicolas Escouto - nicolas.escouto@gmail.com
+
+###Release Notes 
+1. Isolation of framework dependency in Application concerns
+3. Use of JMS serialization with YML
+2. Tests sketch

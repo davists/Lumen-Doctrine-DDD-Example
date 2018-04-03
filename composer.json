@@ -1,6 +1,6 @@
 {
-  "name": "Lumen Doctrine DDD Example",
-  "description": "Service API",
+  "name": "Petdrive Manager Service",
+  "description": "Manager Service API",
   "keywords": ["DDD", "Lumen", "Doctrine"],
   "license": "MIT",
   "type": "project",
@@ -12,27 +12,50 @@
       "role": "Developer"
     }
   ],
+
   "require": {
     "php": ">=5.6.4",
     "laravel/lumen-framework": "5.3.*",
     "vlucas/phpdotenv": "~2.2",
     "laravel-doctrine/orm": "1.2.*",
     "firebase/php-jwt": "dev-master",
-    "graham-campbell/throttle": "^5.3"
-
+    "graham-campbell/throttle": "^5.3",
+    "vlucas/valitron": "^1.4",
+    "guzzlehttp/guzzle": "~6.0",
+    "jms/serializer": "^1.6",
+    "symfony/property-access": "^3.2",
+    "aws/aws-sdk-php-laravel": "~3.0",
+    "laravel-doctrine/extensions":"^1.0",
+    "gedmo/doctrine-extensions":"^2.4",
+    "laravel-doctrine/fluent": "^1.1",
+    "darkaonline/swagger-lume": "~1.0",
+    "beberlei/DoctrineExtensions": "^1.0",
+    "league/flysystem-aws-s3-v3": "^1.0",
+    "illuminate/filesystem": "5.3.*",
+    "laravel-doctrine/migrations": "1.0.*",
+    "maatwebsite/excel": "~2.1.0",
+    "phpoffice/phpspreadsheet": "^1.0@beta"
   },
+
   "require-dev": {
     "fzaninotto/faker": "~1.4",
     "phpunit/phpunit": "~5.0",
     "mockery/mockery": "~0.9"
   },
+
+
   "autoload": {
     "psr-4": {
-      "Application\\Core\\": "Application/core/",
+      "Application\\Lumen53\\": "Application/Lumen53/core/",
+      "Application\\Services\\": "Application/Services/",
       "Domain\\": "Domain/",
       "Infrastructure\\": "Infrastructure/"
-    }
+    },
+    "files": [
+            "Infrastructure/Util/helper.php"
+          ]
   },
+
   "autoload-dev": {
     "classmap": [
       "tests/",

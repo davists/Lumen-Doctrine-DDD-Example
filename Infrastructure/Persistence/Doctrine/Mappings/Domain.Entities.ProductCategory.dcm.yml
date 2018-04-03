@@ -1,0 +1,48 @@
+Domain\Entities\ProductCategory:
+    type: entity
+    table: product_category
+    indexes:
+        product_category_category_id_index:
+            columns:
+                - category_id
+        product_category_product_id_index:
+            columns:
+                - product_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        createdAt:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: created_at
+    manyToOne:
+        category:
+            targetEntity: Domain\Entities\Category
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                category_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        product:
+            targetEntity: Domain\Entities\Product
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                product_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

@@ -2,8 +2,9 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class DataTestSeeder extends Seeder
 {
+    public function __construct(){}
     /**
      * Run the database seeds.
      *
@@ -11,6 +12,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call('DataTestSeeder');
+        //$fakerBr = Faker\Factory::create('pt_BR');
+
     }
 }

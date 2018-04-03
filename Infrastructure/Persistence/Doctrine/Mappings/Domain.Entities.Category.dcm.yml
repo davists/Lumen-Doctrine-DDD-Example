@@ -1,0 +1,38 @@
+Domain\Entities\Category:
+    type: entity
+    table: category
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        companyId:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            column: company_id
+        name:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        image:
+            type: string
+            nullable: true
+            length: 255
+            options:
+                fixed: false
+        createdAt:
+            type: datetime
+            nullable: false
+            options:
+                default: CURRENT_TIMESTAMP
+            column: created_at
+    lifecycleCallbacks: {  }
