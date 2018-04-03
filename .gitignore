@@ -3,3 +3,4 @@
 vendor
 Application/Lumen53/storage
 Application/Lumen53/.env
+composer.lock
