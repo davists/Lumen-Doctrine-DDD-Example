@@ -1,5 +1,5 @@
 # phpstorm project files
-.idea
+.idea/
 vendor
 Application/Lumen53/storage
 Application/Lumen53/.env
